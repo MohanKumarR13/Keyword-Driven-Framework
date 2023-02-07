@@ -6,12 +6,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class LoginHRM {
-	public static void main(String[] args) {
-   
-    
-    // Launch Website  
-   
+private LoginHRM() {
+	super();
 
 
 
-}}
+}
+public static final String URL="https://www.browserstack.com/users/sign_in";
+}
