@@ -13,7 +13,7 @@ public class Utill {
 	static XSSFSheet sheet;
 	XSSFCell cell;
 
-	public static void fileLoc(String loc ) throws IOException {
+	public static void fileLoc(String loc) throws IOException {
 
 		file = new FileInputStream(loc);
 		book = new XSSFWorkbook(file);
@@ -21,7 +21,7 @@ public class Utill {
 
 	}
 
-	public String getCellValueExcelSheet(int row,int column) {
+	public String getCellValueExcelSheet(int row, int column) {
 		cell = sheet.getRow(row).getCell(column);
 		String cellValue = cell.getStringCellValue();
 		System.out.println(cellValue);
