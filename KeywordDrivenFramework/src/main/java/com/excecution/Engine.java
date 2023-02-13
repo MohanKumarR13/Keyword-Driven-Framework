@@ -6,7 +6,7 @@ import Keyword.ActionKeyword;
 import Utillity.Utill;
 
 public class Engine {
-public static void main(String[] args) throws IOException {
+public static void main(String[] args) throws IOException, InterruptedException {
 	Utill util=new Utill();
 	Utill.fileLoc("C:\\Users\\Mohan\\git\\KeywordDriven\\KeywordDrivenFramework\\Sheets\\Keyworddriven.xlsx");
 	
@@ -23,7 +23,12 @@ public static void main(String[] args) throws IOException {
 			ActionKeyword.enterPassword();
 		}else if(keyWord.equalsIgnoreCase("clickSignIn")){
 			ActionKeyword.clickSignIn();;
+		}else if(keyWord.equalsIgnoreCase("clickLink")){
+			ActionKeyword.clickLink();
 		}
+		
+		
+		
 	}
 }
 }
