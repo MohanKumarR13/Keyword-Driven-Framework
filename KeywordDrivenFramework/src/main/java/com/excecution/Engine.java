@@ -5,6 +5,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 import Keyword.ActionKeyword;
+import Utillity.Locators;
 import Utillity.Utill;
 
 public class Engine {
@@ -25,6 +26,28 @@ public class Engine {
 		}
 	}
 	
+	public void findWebElement() {
+		switch (Utill.locatorName) {
+		case "name":
+				Locators.getName(Utill.locatorValue);
+			break;
+			
+	case "xpath":
+			
+			break;
+
+	case "className":
+		
+		break;
+	case "id":
+		
+		break;
+		default:
+			break;
+		}
+	}
+	
+	
 	
 	public static void main(String[] args) throws IOException, InterruptedException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
 		Utill util = new Utill();
@@ -38,28 +61,10 @@ public class Engine {
 		 
 		 Engine.getActionKeyword();
 		for (int row = 1; row <= Utill.totalRows; row++) {
-			// keyWord = util.getCellValueExcelSheet(row, locatorcolumn,keywordColumn,dataColumn);
 			util.getCellValueExcelSheet(row, locatorcolumn,keywordColumn,dataColumn);
 
 			 //Engine.getExcecuteKeyword();
-//			if (keyWord.equalsIgnoreCase("openBrowser")) {
-//				ActionKeyword.openBrowser();
-//			} else if (keyWord.equalsIgnoreCase("gotoUrl")) {
-//				ActionKeyword.gotoUrl();
-//			} else if (keyWord.equalsIgnoreCase("enterUserName")) {
-//				ActionKeyword.enterUserName();
-//			} else if (keyWord.equalsIgnoreCase("enterPassword")) {
-//				ActionKeyword.enterPassword();
-//			} else if (keyWord.equalsIgnoreCase("clickSignIn")) {
-//				ActionKeyword.clickSignIn();
-//
-//			} else if (keyWord.equalsIgnoreCase("clickLink")) {
-//				ActionKeyword.clickLink();
-//			} else if (keyWord.equalsIgnoreCase("enterTitle")) {
-//				ActionKeyword.enterTitle();
-//			} else if (keyWord.equalsIgnoreCase("searchData")) {
-//				ActionKeyword.searchData();
-//			}
+
 
 		}
 	}
