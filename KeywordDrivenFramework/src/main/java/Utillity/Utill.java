@@ -17,6 +17,7 @@ public class Utill {
 	public static String locatorValue;
 	public static String keywordColumnValue;
 	public static String dataColumnValue;
+	public static String locatorDataValue;
 	public static int totalRows;
 
 	public static void fileLoc(String loc) throws IOException {
@@ -37,13 +38,16 @@ public class Utill {
 	
 		locatorName=locatorColumnValue.split(":")[0].toString().trim();
 		locatorValue=locatorColumnValue.split(":")[1].toString().trim();
+		//locatorDataValue=locatorColumnValue.split(":")[2].toString().trim();
+
+		
 	}else {
 		locatorName="NA";
 		locatorValue="NA";
 	}
 	keywordColumnValue=sheet.getRow(row).getCell(keywordColumn).toString().trim();
-	dataColumnValue=sheet.getRow(dataColumn).toString().trim();
-	System.out.println(locatorName+" : "+locatorValue+" KeyWord: "+keywordColumnValue+"Data :"+dataColumn);
+	dataColumnValue=sheet.getRow(row).getCell(dataColumn).toString().trim();
+	System.out.println(locatorName+" : "+locatorValue+" KeyWord: "+ keywordColumnValue+"Data :"+dataColumnValue); 
 
 
 		
