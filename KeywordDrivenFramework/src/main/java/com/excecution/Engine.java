@@ -28,13 +28,19 @@ public class Engine {
 	
 	public static void main(String[] args) throws IOException, InterruptedException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
 		Utill util = new Utill();
-		Utill.fileLoc("C:\\KeywordDrivenFramework\\KeywordDriven\\KeywordDrivenFramework\\Sheets\\Keyworddriven.xlsx");
-		// Utill.fileLoc("C:\\Users\\Admin\\git\\KeywordDriven\\KeywordDrivenFramework\\Sheets\\Keyworddriven.xlsx");
+		//Utill.fileLoc("C:\\KeywordDrivenFramework\\KeywordDriven\\KeywordDrivenFramework\\Sheets\\Keyworddriven.xlsx");
+		 Utill.fileLoc("C:\\Users\\Admin\\git\\KeywordDriven\\KeywordDrivenFramework\\Sheets\\Keyworddriven.xlsx");
 		 Engine engine=new Engine();
+		 int locatorcolumn=3;
+		 int keywordColumn=locatorcolumn+1;
+		 int dataColumn=locatorcolumn+2;
+
 		 Engine.getActionKeyword();
 		for (int row = 1; row <= 8; row++) {
-			 keyWord = util.getCellValueExcelSheet(row, 3);
-			 Engine.getExcecuteKeyword();
+			// keyWord = util.getCellValueExcelSheet(row, locatorcolumn,keywordColumn,dataColumn);
+			util.getCellValueExcelSheet(row, locatorcolumn,keywordColumn,dataColumn);
+
+			 //Engine.getExcecuteKeyword();
 //			if (keyWord.equalsIgnoreCase("openBrowser")) {
 //				ActionKeyword.openBrowser();
 //			} else if (keyWord.equalsIgnoreCase("gotoUrl")) {

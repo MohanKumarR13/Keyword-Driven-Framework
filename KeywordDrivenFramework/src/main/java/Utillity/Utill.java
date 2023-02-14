@@ -12,6 +12,7 @@ public class Utill {
 	static XSSFWorkbook book;
 	static XSSFSheet sheet;
 	XSSFCell cell;
+	public static String locatorColumnValue;
 
 	public static void fileLoc(String loc) throws IOException {
 
@@ -21,10 +22,10 @@ public class Utill {
 
 	}
 
-	public String getCellValueExcelSheet(int row, int column) {
-		cell = sheet.getRow(row).getCell(column);
-		String cellValue = cell.getStringCellValue();
-		System.out.println(cellValue);
-		return cellValue;
+	public void getCellValueExcelSheet(int row, int locatorcolumn,int keywordColumn,int dataColumn) {
+//		cell = sheet.getRow(row).getCell(column);
+//		String cellValue = cell.getStringCellValue();
+	locatorColumnValue=	sheet.getRow(row).getCell(locatorcolumn).toString().trim();
+		System.out.println(locatorColumnValue);
 	}
 }
