@@ -1,4 +1,4 @@
-package com.keyword;
+package com.automation.baseurl;
 
 public class LoginHRM {
 	private LoginHRM() {
