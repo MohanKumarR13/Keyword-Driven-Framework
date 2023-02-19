@@ -1,4 +1,4 @@
-package com.automation.KeywordDrivenFramework;
+package com.automation.keyworddrivenframework;
 
 /**
  * Hello world!
